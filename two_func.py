@@ -4,19 +4,19 @@ The second function uses the output of function one to greet the
 user.
 """
 
-def func1():
+def get_name():
     """ This function asks for name."""
     name = input("What is your name? ")
     return name
-result = func1()
+result = get_name()
 
-def func2(user):
+def greet_user(user):
     """ This function greets the user."""
     
     print(f"Hey, {user} nice to meet you!")
 
-func2(result)
+greet_user(result)
 
-func2(func1())
+greet_user(get_name())
 
-print(func2.__doc__)
+print(greet_user.__doc__)
